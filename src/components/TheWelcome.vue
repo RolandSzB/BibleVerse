@@ -3,7 +3,10 @@ import { ref } from "vue";
 const welcomeJSON = ref("");
 import axios from "axios";
 function callAPIWelcome() {
-  axios({ method: "GET", url: "http://localhost:3000" }).then(response => {
+  axios({
+    method: "GET",
+    url: "https://query.getbible.net/v2/kjv/1%20John%203:16",
+  }).then((response) => {
     console.log("RESPONSE", response.data);
     welcomeJSON.value = response.data;
     localStorage.setItem("lists", JSON.stringify(response.data));
