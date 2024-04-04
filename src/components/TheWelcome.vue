@@ -1,11 +1,20 @@
 <script setup>
+function getRandomNumber() {
+  return Math.floor(Math.random() * 66) + 1;
+}
+
 import { ref } from "vue";
 const welcomeJSON = ref("");
 import axios from "axios";
 function callAPIWelcome() {
+  const randomNumber = getRandomNumber();
+  console.log("RANDOM NUMBER", randomNumber);
+  const apiUrl = `https://query.getbible.net/v2/kjv/${randomNumber} 3:16`;
+  console.log("URL", apiUrl);
+
   axios({
     method: "GET",
-    url: "https://query.getbible.net/v2/kjv/1%20John%203:16",
+    url: apiUrl,
   }).then((response) => {
     console.log("RESPONSE", response.data);
     welcomeJSON.value = response.data;
