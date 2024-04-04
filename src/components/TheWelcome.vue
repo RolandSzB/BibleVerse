@@ -1,5 +1,5 @@
 <script setup>
-function getRandomNumber() {
+function getRandomBookNumber() {
   return Math.floor(Math.random() * 66) + 1;
 }
 
@@ -7,9 +7,9 @@ import { ref } from "vue";
 const welcomeJSON = ref("");
 import axios from "axios";
 function callAPIWelcome() {
-  const randomNumber = getRandomNumber();
+  const randomBook = getRandomBookNumber();
   console.log("RANDOM NUMBER", randomNumber);
-  const apiUrl = `https://query.getbible.net/v2/kjv/${randomNumber} 3:16`;
+  const apiUrl = `https://query.getbible.net/v2/kjv/${randomBook} 1:1`;
   console.log("URL", apiUrl);
 
   axios({
