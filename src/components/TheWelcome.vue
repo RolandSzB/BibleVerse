@@ -33,10 +33,15 @@ function callAPIWelcome() {
     Get Verse
   </button>
 
-  <h3 class="font-serif text-2xl">
-    {{ welcomeJSON ? welcomeJSON[`kjv_${randomBook}_1`].verses[0].text : "" }}
-  </h3>
-  <p class="font-bold">
-    {{ welcomeJSON ? welcomeJSON[`kjv_${randomBook}_1`].verses[0].name : "" }}
-  </p>
+  <a
+    href="#"
+    class="block max-w-sm p-6 bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 text-center"
+  >
+    <h5 class="mb-2 text-2xl font-bold text-gray-900">
+      {{ welcomeJSON ? welcomeJSON[`kjv_${randomBook}_1`].verses[0].text : "" }}
+    </h5>
+    <p class="font-normal text-gray-700">
+      {{ welcomeJSON ? welcomeJSON[`kjv_${randomBook}_1`].verses[0].name : "" }}
+    </p>
+  </a>
 </template>
