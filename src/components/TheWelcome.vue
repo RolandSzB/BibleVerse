@@ -1,16 +1,16 @@
 <script setup>
+import { ref } from "vue";
+let randomBook = ref(null);
+
 function getRandomBookNumber() {
   return Math.floor(Math.random() * 66) + 1;
 }
 
-import { ref } from "vue";
 const welcomeJSON = ref("");
 import axios from "axios";
 function callAPIWelcome() {
-  const randomBook = getRandomBookNumber();
-  console.log("RANDOM NUMBER", randomNumber);
-  const apiUrl = `https://query.getbible.net/v2/kjv/${randomBook} 1:1`;
-  console.log("URL", apiUrl);
+  randomBook.value = getRandomBookNumber();
+  const apiUrl = `https://query.getbible.net/v2/kjv/${randomBook.value} 1:1`;
 
   axios({
     method: "GET",
@@ -24,15 +24,19 @@ function callAPIWelcome() {
 </script>
 
 <template>
-  Welcome
+  Bible Verse
   <button
     @click="callAPIWelcome"
     type="button"
     class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
   >
-    Call API Welcome
+    Get Verse
   </button>
 
-  API RESPONSE
-  <h3>{{ welcomeJSON }}</h3>
+  <h3 class="font-serif text-2xl">
+    {{ welcomeJSON ? welcomeJSON[`kjv_${randomBook}_1`].verses[0].text : "" }}
+  </h3>
+  <p class="font-bold">
+    {{ welcomeJSON ? welcomeJSON[`kjv_${randomBook}_1`].verses[0].name : "" }}
+  </p>
 </template>
