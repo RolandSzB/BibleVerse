@@ -33,6 +33,7 @@ const RAW_RUNTIME_STATE =
           ["pinia", "virtual:b38c8cdb355f497a4413549fc9e0a8ef9224a55d1c9ddad94cb552787f4656f53db1162fa827aa960895720dd97dc6926e894be6a8c3090caa17c4fd45cd4c48#npm:2.1.7"],\
           ["postcss", "npm:8.4.38"],\
           ["tailwindcss", "npm:3.4.3"],\
+          ["uuid", "npm:9.0.1"],\
           ["vite", "virtual:b38c8cdb355f497a4413549fc9e0a8ef9224a55d1c9ddad94cb552787f4656f53db1162fa827aa960895720dd97dc6926e894be6a8c3090caa17c4fd45cd4c48#npm:5.2.8"],\
           ["vite-plugin-pwa", "virtual:b38c8cdb355f497a4413549fc9e0a8ef9224a55d1c9ddad94cb552787f4656f53db1162fa827aa960895720dd97dc6926e894be6a8c3090caa17c4fd45cd4c48#npm:0.19.7"],\
           ["vue", "virtual:b38c8cdb355f497a4413549fc9e0a8ef9224a55d1c9ddad94cb552787f4656f53db1162fa827aa960895720dd97dc6926e894be6a8c3090caa17c4fd45cd4c48#npm:3.4.21"],\
@@ -4274,6 +4275,7 @@ const RAW_RUNTIME_STATE =
           ["pinia", "virtual:b38c8cdb355f497a4413549fc9e0a8ef9224a55d1c9ddad94cb552787f4656f53db1162fa827aa960895720dd97dc6926e894be6a8c3090caa17c4fd45cd4c48#npm:2.1.7"],\
           ["postcss", "npm:8.4.38"],\
           ["tailwindcss", "npm:3.4.3"],\
+          ["uuid", "npm:9.0.1"],\
           ["vite", "virtual:b38c8cdb355f497a4413549fc9e0a8ef9224a55d1c9ddad94cb552787f4656f53db1162fa827aa960895720dd97dc6926e894be6a8c3090caa17c4fd45cd4c48#npm:5.2.8"],\
           ["vite-plugin-pwa", "virtual:b38c8cdb355f497a4413549fc9e0a8ef9224a55d1c9ddad94cb552787f4656f53db1162fa827aa960895720dd97dc6926e894be6a8c3090caa17c4fd45cd4c48#npm:0.19.7"],\
           ["vue", "virtual:b38c8cdb355f497a4413549fc9e0a8ef9224a55d1c9ddad94cb552787f4656f53db1162fa827aa960895720dd97dc6926e894be6a8c3090caa17c4fd45cd4c48#npm:3.4.21"],\
@@ -6884,6 +6886,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../home/node/.yarn/berry/cache/util-deprecate-npm-1.0.2-e3fe1a219c-10c0.zip/node_modules/util-deprecate/",\
         "packageDependencies": [\
           ["util-deprecate", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["uuid", [\
+      ["npm:9.0.1", {\
+        "packageLocation": "../home/node/.yarn/berry/cache/uuid-npm-9.0.1-39a8442bc6-10c0.zip/node_modules/uuid/",\
+        "packageDependencies": [\
+          ["uuid", "npm:9.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
